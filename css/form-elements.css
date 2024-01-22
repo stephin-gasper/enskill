@@ -1,0 +1,580 @@
+.input {
+    z-index: 1;
+    margin-top: 3.6rem;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.input-field {
+    display: block;
+    float: right;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    -webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input-field:focus {
+    outline: none;
+    border: none;
+}
+
+.input-label {
+    display: inline-block;
+    float: right;
+    padding: 18px;
+    width: 40%;
+    font-weight: bold;
+    font-size: 18px;
+    font-size: 1.8rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input-label-content {
+    position: relative;
+    line-height: 1;
+    display: block;
+    width: 100%;
+}
+
+.graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+/* Individual styles */
+
+/* Akira */
+.input-akira {
+    margin-top: 3.6rem;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.input-field-akira {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 18px;
+    z-index: 10;
+    display: block;
+    width: calc(100% - 33px);
+    height: 100%;
+    background: transparent;
+}
+
+.input-label-akira {
+    font-size: 1.8rem;
+    width: 100%;
+    cursor: text;
+    background-color: #333;
+}
+
+.input-label-akira::before {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale3d(0.98, 0.88, 1);
+    transform: scale3d(0.98, 0.88, 1);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.input-label-content-akira {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.input-field-akira:focus + .input-label-akira::before,
+.input-filled .input-label-akira::before {
+    -webkit-transform: scale3d(0.99, 0.95, 1);
+    transform: scale3d(0.99, 0.95, 1);
+}
+
+.input-field-akira:focus + .input-label-akira,
+.input-filled .input-label-akira {
+    cursor: default;
+    pointer-events: none;
+}
+
+.input-field-akira:focus + .input-label-akira .input-label-content-akira,
+.input-filled .input-label-content-akira {
+    -webkit-transform: translate3d(0, -5rem, 0);
+    transform: translate3d(0, -5rem, 0);
+}
+
+/* Madoka */
+.input-madoka {
+    margin-top: 3.6rem;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    -webkit-transition: margin 0.07s;
+    transition: margin 0.07s;
+}
+
+.input-field-madoka {
+    padding: 18px;
+    width: 100%;
+    background: transparent;
+    color: #7A7593;
+}
+
+.input-label-madoka {
+    font-size: 1.8rem;
+    left: 15px;
+    position: absolute;
+    width: calc(100% - 31px);
+    height: 100%;
+    color: #333;
+    text-align: left;
+    cursor: text;
+}
+
+.input-label-content-madoka {
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.graphic-madoka {
+    -webkit-transform: scale3d(1, -1, 1);
+    transform: scale3d(1, -1, 1);
+    -webkit-transition: stroke-dashoffset 0.3s;
+    transition: stroke-dashoffset 0.3s;
+    pointer-events: none;
+    stroke: #333;
+    stroke-width: 4px;
+    stroke-dasharray: 962;
+    stroke-dashoffset: 558;
+}
+
+.input-field-madoka:focus + .input-label-madoka,
+.input-filled .input-label-madoka {
+    cursor: default;
+    pointer-events: none;
+}
+
+.input-field-madoka:focus + .input-label-madoka .graphic-madoka,
+.input-filled .graphic-madoka {
+    stroke-dashoffset: 0;
+}
+
+.input-field-madoka:focus + .input-label-madoka .input-label-content-madoka,
+.input-filled .input-label-content-madoka {
+    -webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+    transform: scale3d(0.88, 0.88, 1) translate3d(0, 5.4rem, 0);
+}
+
+/* Nao */
+.input-nao {
+}
+
+.input-field-nao {
+    padding: 18px;
+    width: 100%;
+    background: transparent;
+    z-index: 2;
+}
+
+.input-label-nao {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: calc(100% - 31px);
+    height: 100%;
+    display: block;
+    text-align: left;
+    padding: 18px;
+    pointer-events: none;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: -webkit-transform 0.2s 0.15s, color 1s;
+    transition: transform 0.2s 0.15s, color 1s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.graphic-nao-wrap {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 31px);
+    height: 100%;
+    z-index: 0;
+    left: 15px;
+    overflow: hidden;
+}
+
+.graphic-nao {
+    stroke: #333;
+    stroke-width: 1.5;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
+    transition: transform 0.7s, stroke 0.7s;
+    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.input-field-nao:focus + .input-label-nao,
+.input-filled .input-label-nao {
+    color: #333;
+    -webkit-transform: translate3d(0, -3rem, 0) scale3d(0.87, 0.87, 1);
+    transform: translate3d(0, -3rem, 0) scale3d(0.87, 0.87, 1);
+}
+
+.input-field-nao:focus ~ .graphic-nao-wrap > .graphic-nao,
+.input-filled .graphic-nao-wrap > .graphic-nao {
+    stroke: #333;
+    -webkit-transform: translate3d(-66.6%, 0, 0);
+    transform: translate3d(-66.6%, 0, 0);
+}
+
+/* Kozakura */
+
+.input-field-kozakura {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    display: block;
+    width: calc(100% - 31px);
+    height: 100%;
+    background: transparent;
+    opacity: 0;
+    z-index: 2;
+}
+
+.input-label-kozakura {
+    width: 100%;
+    cursor: text;
+    z-index: 1;
+    padding: 30px 18px;
+}
+
+.input-label-content-kozakura {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.graphic-kozakura-wrap {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 31px);
+    height: 100%;
+    z-index: 0;
+    left: 15px;
+    overflow: hidden;
+}
+
+.graphic-kozakura {
+    fill: rgba(0,0,0,0.1);
+    pointer-events: none;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    -webkit-transition: -webkit-transform 0.7s, fill 0.7s;
+    transition: transform 0.7s, fill 0.7s;
+    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.input-field-kozakura:focus,
+.input-filled .input-field-kozakura {
+    -webkit-transition: opacity 0s 0.35s;
+    transition: opacity 0s 0.35s;
+    opacity: 1;
+}
+
+.input-field-kozakura:focus + .input-label-kozakura .input-label-content-kozakura,
+.input-filled .input-label-content-kozakura {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+    webkit-transform: translate3d(-16px, -4rem, 0) scale3d(0.9, 0.87, 1);
+    transform: translate3d(-16px, -4rem, 0) scale3d(0.9, 0.87, 1);
+}
+
+.input-field-kozakura:focus ~ .graphic-kozakura-wrap > .graphic-kozakura,
+.input-filled .graphic-kozakura-wrap > .graphic-kozakura {
+    fill: rgba(0,0,0,0.15);
+    -webkit-transform: translate3d(-66.6%, 0, 0);
+    transform: translate3d(-66.6%, 0, 0);
+}
+
+/* Checkbox and radio */
+
+.ac-custom li {
+    padding: 25px 0;
+}
+
+.ac-custom label {
+    display: inline-block;
+    position: relative;
+    font-size: 3.6rem;
+    padding: 0 0 0 80px;
+    vertical-align: top;
+    color: #333;
+    cursor: pointer;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 0;
+    margin-top: -25px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"] {
+    opacity: 0;
+    -webkit-appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 100;
+}
+
+.ac-custom label::before {
+    content: '';
+    border: 4px solid #333;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.ac-radio label::before {
+    border-radius: 50%;
+}
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label {
+    color: #333;
+}
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before {border-color: #333;}
+
+.ac-circle input[type="checkbox"]:checked + label::before,
+.ac-circle input[type="radio"]:checked + label::before {
+    background-color: #333;
+}
+
+/* General SVG and path styles */
+
+.ac-custom svg {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    left: 5px;
+    pointer-events: none;
+}
+
+.ac-custom svg path {
+    stroke: hsla(0, 88%, 63%, 1);
+    stroke-width: 13px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* Specific input, SVG and path styles */
+
+/* Circle */
+.ac-circle input[type="checkbox"],
+.ac-circle input[type="radio"],
+.ac-circle label::before {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    left: 10px;
+    position: absolute;
+}
+
+.ac-circle label::before {
+    background-color: #333;
+    border: none;
+}
+
+.ac-circle svg {
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    left: -10px;
+}
+
+.ac-circle svg path {
+    stroke-width: 5px;
+}
+
+/* File input */
+
+.js .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px 20px;
+    /* 10px 20px */
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile + label svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.45rem;
+    /* 4px */
+    margin-right: 0.45rem;
+    /* 4px */
+}
+
+.inputfile-1 + label {
+    color: #333;
+    border: 3px solid #333;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {color: #595959;border-color: #595959;}
+
+/* Button */
+
+/* General button style (reset) */
+.enskill-btn {
+    border: none;
+    background-color: #333;
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 55px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.enskill-btn:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Button 1 */
+
+/* Button 1e */
+.enskill-btn-1e {
+    overflow: hidden;
+}
+
+.enskill-btn-1e:after {
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: #595959;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.enskill-btn-1e:hover,
+.enskill-btn-1e:focus,
+.enskill-btn-1e:active {
+    color: #fff;
+    background-color: #333;
+}
+
+.enskill-btn-1e:hover:after,
+.enskill-btn-1e:focus:after,
+.enskill-btn-1e:active:after {
+    height: 230%;
+    opacity: 1;
+}
+
+.enskill-btn-txt {
+    z-index: 2;
+}
+/*
+
+.input-tb-graphic-wrap {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 31px);
+    height: 100%;
+    z-index: 0;
+    left: 15px;
+    overflow: hidden;
+}
+
+.input-tb-graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+    stroke: #333;
+    stroke-width: 2.3;
+    pointer-events: none;
+    -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
+    transition: transform 0.7s, stroke 0.7s;
+    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+
+.input-tb-field:focus ~ .input-tb-graphic-wrap > .input-tb-graphic,
+.input-tb-filled .input-tb-graphic-wrap > .input-tb-graphic {
+    stroke: #333;
+    -webkit-transform: translate3d(-66.6%, 0, 0);
+    transform: translate3d(-66.6%, 0, 0);
+}
+
+.input-tb-field:focus + .input-tb-label,
+.input-tb-filled .input-tb-label {
+    color: #333;
+    -webkit-transform: translate3d(0, -3rem, 0) scale3d(0.87, 0.87, 1);
+    transform: translate3d(0, -3rem, 0) scale3d(0.87, 0.87, 1);
+}
+*/

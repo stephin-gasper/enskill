@@ -1,0 +1,123 @@
+/*## Tabs
+----------------------------------------------------------------------------- */
+
+.tab-head-wrap {
+    border-bottom: 1px solid #E4E4E4;
+}
+.tab-head-item,
+.tab-head-item-resp {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 0 20px 25px;
+    text-align: center;
+}
+
+.tab-head-item-resp {
+    float: none;
+    text-align: left;
+    width: 100%;
+    border-bottom: 6px solid #E4E4E4;
+    padding: 25px 43px 25px 20px;
+}
+
+.tab-head-item-resp:first-of-type {
+    border-top: 6px solid #E4E4E4;
+}
+
+.tab-head-item:hover {
+    cursor: pointer;
+}
+.tab-slide {
+    background: hsla(0, 88%, 63%, 1);
+    width: 50%;
+    height: 7px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transition: left 0.3s ease-out;
+    transition: left 0.3s ease-out;
+}
+
+.tab-content {
+    display: none;
+    padding: 45px 0 0;
+}
+.tab-content-active {
+    display: block;
+}
+.tab-head-active:nth-of-type(1) ~ .tab-slide {
+    left: 0;
+}
+.tab-head-active:nth-of-type(2) ~ .tab-slide {
+    left: 50%;
+}
+
+.tab-head-icon-resp {
+    font-size: 0.8em;
+    margin-top: 8px;
+    position: absolute;
+    right: 6px;
+    top: 25px;
+}
+
+
+/*## Tabs Content
+----------------------------------------------------------------------------- */
+
+#reachus-content {
+    font-style: normal;
+}
+
+.reachus-txt {
+    position: relative;
+    padding-left: 34px;
+}
+
+.reachus-txt-wrap {
+    margin-top: 35px;
+}
+
+.ei.reach-us-icon {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 0.9;
+    margin-right: 10px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+
+.reach-us-icon.ei-phone {
+    font-size: 28px;
+    font-size: 2.8rem;
+    top: 3px;
+}
+
+.reach-us-icon.ei-map-marker {
+    font-size: 26px;
+    font-size: 2.6rem;
+    top: 2px;
+}
+
+@media only screen and (max-width: 800px) {
+    .tab-content {
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        display: block;
+        opacity: 0;
+        overflow: hidden;
+        max-height: 0;
+        padding: 0;
+    }
+    .tab-content-active-resp {
+        padding: 45px 0 25px;
+        border-bottom: 6px solid #E4E4E4;
+        max-height: 1500px;
+        opacity: 1;
+    }
+    .tab-content-active-resp:last-of-type {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
