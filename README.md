@@ -38,6 +38,16 @@ The theme has many outdated code since it was created during 2016, before all th
 3. Clone/download this repository into the `/wp-content/themes/` directory of your WordPress instance.
 4. In the WordPress admin, use the Appearance > Themes screen to activate EnSkill.
 
+## Screenshots
+
+### Desktop
+
+![Desktop demo](https://i.ibb.co/0Qd4kft/enskill-000webhostapp-com.png)
+
+### Mobile
+
+![Mobile demo](https://i.ibb.co/JQgS1Gk/enskill-000webhostapp-com-i-Phone-14-Pro-Max.png)
+
 ## Contributors
 
 Stephin Gasper - [stephingasper.com](https://stephin-gasper.vercel.app/)
