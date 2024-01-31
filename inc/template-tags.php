@@ -29,7 +29,7 @@ function enskill_posted_on() {
 		'<span class="entry-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><a class="entry-author-link" itemprop="url" rel="author" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '"><span class="entry-author-name" itemprop="name">' . esc_html( get_the_author() ) . '</span></a></span>'
 	);
 
-	echo $posted_on . ' ' . $byline; // WPCS: XSS OK.
+	echo $posted_on; // WPCS: XSS OK.
 
 }
 endif;
