@@ -2,7 +2,7 @@
 
 > Official code for [enskill.in](https://enskill.in/) (discontinued) WordPress website
 
-[View Alternative Demo](https://enskill.000webhostapp.com/)
+[View Alternative Demo](https://enskill.rf.gd/)
 
 ## About
 
