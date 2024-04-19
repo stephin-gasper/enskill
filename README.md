@@ -42,11 +42,11 @@ The theme has many outdated code since it was created during 2016, before all th
 
 ### Desktop
 
-![Desktop demo](https://i.ibb.co/tDBx3NY/enskill-desktop.png)
+![Desktop demo](https://i.ibb.co/XD0BLHR/enskill-desktop.png)
 
 ### Mobile
 
-![Mobile demo](https://i.ibb.co/SR3mgKj/enskill-mobile.png)
+![Mobile demo](https://i.ibb.co/rb9QJr7/enskill-mobile.png)
 
 ## Contributors
 
